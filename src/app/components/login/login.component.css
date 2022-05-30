@@ -1,0 +1,30 @@
+.login-page {
+    padding: 70px;
+}
+
+.logo-container , .sign-options{
+    display: flex;
+    align-items: center;
+}
+
+.ml-title {
+    font-size: 2.5rem;
+    color: #4CB99F;
+    margin-left: 10px;
+}
+
+.bar {
+    font-size : 4.5rem;
+}
+
+.sign-option {
+    font-size: 3rem;
+    font-weight: 300;
+    outline: none;
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+}
+

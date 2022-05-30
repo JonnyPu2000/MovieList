@@ -1,0 +1,10 @@
+{
+    "/FILMS": {
+      "target": "https://apifilmeslista.herokuapp.com",
+      "secure": false,
+      "pathRewrite": {
+        "^/FILMS": ""
+      },
+      "changeOrigin": true
+    }
+  }

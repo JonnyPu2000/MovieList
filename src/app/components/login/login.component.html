@@ -1,0 +1,13 @@
+<div class="login-page">
+    <div class="logo-container">
+        <img src="https://via.placeholder.com/80" alt="Logo">
+        <span class="ml-title">Movie List</span>
+    </div>
+    <div class="sign-options">
+        <button class="btn sign-option" (click)="setSignMethod(true)">Login</button>
+        <span class="bar">|</span>
+        <button class="btn sign-option" (click)="setSignMethod(false)">Cadastro</button>
+    </div>
+    <app-login-acess *ngIf="signIn"></app-login-acess>
+    <app-register-acess *ngIf="!signIn" (onRegister)="handleRegister()"></app-register-acess>
+</div>
