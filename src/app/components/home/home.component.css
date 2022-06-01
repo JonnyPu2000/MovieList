@@ -90,7 +90,7 @@
 .filme-titulo{
     position: relative;
     width: max-content;
-    font-size: 22px;
+    font-size: 20px;
 
 
 }
@@ -100,12 +100,12 @@
     position: absolute;
     height: 4px;
     width: calc(100% + var(--padding));
-    background: rgb(17, 71, 26);;
+    background: rgb(32, 167, 55);
     left: calc(var(--padding)*-1);
     bottom: -2px;
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 500ms ease;
+    transition: transform 900ms ease;
 
 
 }
@@ -115,16 +115,15 @@
     display: inline-block;
     text-decoration: none;
     color: white;
-    background-color:#2B2D42;
+    background-color:#3941a0;
     padding: 0.5em 1.25em;
     border-radius: 0.5rem;
 }
 
 .botao-salvar:hover,.botao-salvar:focus{
-    background-color: rgb(17, 71, 26);
-
-
+    background-color: rgb(43, 105, 61);
 }
+
 
 
 
