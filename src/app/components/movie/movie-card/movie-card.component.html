@@ -1,3 +1,8 @@
-<div>
-    <span>{{data.Title}}</span>
-</div>
+<div class="filme" [ngStyle]="{'background-image': 'url(' + data.imageUrl + ')'}">
+    <div class="filme-conteudo">
+      <h2 class="filme-titulo">{{data.title}}</h2>
+      <p class="filme-sinopse">{{data.description}}</p>
+      <a *ngIf="!data.isSaved" (click)="save()" class="botao botao-salvar"> Salvar </a>
+      <a *ngIf="data.isSaved" (click)="remove()" class="botao botao-remover"> Remover </a>
+    </div>
+  </div>
