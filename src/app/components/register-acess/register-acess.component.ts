@@ -8,6 +8,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class RegisterAcessComponent implements OnInit {
 
   @Output() onRegister: EventEmitter<void> = new EventEmitter();
+  @Output() onChangeMode: EventEmitter<void> = new EventEmitter();
 
   constructor() { }
 
@@ -17,5 +18,9 @@ export class RegisterAcessComponent implements OnInit {
 
   register() {
     this.onRegister.emit();
+  }
+
+  goToLogin() {
+    this.onChangeMode.emit();
   }
 }

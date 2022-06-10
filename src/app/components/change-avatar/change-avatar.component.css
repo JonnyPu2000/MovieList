@@ -1,0 +1,10 @@
+.change-avatar {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mat-dialog-actions {
+    justify-content: flex-end;
+}

@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MovieList</title>
-    <link rel="stylesheet" href="login-acess.component.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-</head>
-
-
-
-<body>
+<div class="register-container">
     <div class="head">
-        <div style="color: white; font-size:1.3rem">Ainda não é membro?</div>
-        <button type="button" class="btn btn-primary"><a href="../register-acess/register-acess.component.html">Cadastrar-se</a></button>
+        <div style="color: white; font-size:1.3rem">Já é Membro?</div>
+        <button type="button" class="btn btn-primary" (click)="goToLogin()">Login</button>
     </div>
 
     <div class="loginContainer">
@@ -32,10 +19,11 @@
                     <label class="label" for="senha">Senha</label>
                     <input class="input" type="password" name="senha" required="True">
                 </div>
-                <button type="submit" class="botao"><a href="../../home/home.component.html">Login</a></button>
+                <div>
+                    <label class="label" for="senha">Digite sua senha novamente</label>
+                    <input class="input" type="password" name="senha" required="True">
                 </div>
+                <button type="submit" class="botao"><a href="../../home/home.component.html">Cadastrar</a></button>
             </form>   
     </div>
-    
-</body>
-</html>
+</div>

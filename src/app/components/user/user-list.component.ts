@@ -1,29 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { ChangeAvatarDialog } from '../change-avatar/change-avatar.component';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-user-list',
+  templateUrl: './user-list.component.html',
+  styleUrls: ['./user-list.component.css']
 })
-export class HomeComponent implements OnInit {
+export class UserListComponent implements OnInit {
 
+  
   constructor(private router: Router, private dialogService: MatDialog) { }
-
+  
   user: any;
   
-  dialogRef: MatDialogRef<ChangeAvatarDialog>
   ngOnInit(): void {
     this.user = JSON.parse(localStorage.getItem('user') || '');
-  }
-
-  openDialog() {
-    this.dialogService.open(ChangeAvatarDialog, {
-      height: '300px',
-      width: '500px',
-    });
   }
 
 
@@ -33,5 +26,12 @@ export class HomeComponent implements OnInit {
 
   goToMyList() {
     this.router.navigate(['my-list'])
+  }
+
+  openDialog() {
+    this.dialogService.open(ChangeAvatarDialog, {
+      height: '300px',
+      width: '500px',
+    });
   }
 }
