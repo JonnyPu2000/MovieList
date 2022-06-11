@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Overpass:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+.filmes{
+    display: flex;
+    padding:  0 0 0 4rem;
+    flex-wrap: wrap;
+
+
+}
+
+.container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    background-color: #2B2D42;
+
+
+}
+
+
+li,a,button{
+    color: #A1A5CE !important;
+    font-family: "overpass";
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none !important;
+}
+
+header{
+    background-color: #2B2D42;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 10px 10%;
+    width: 100%;
+
+}
+
+.logo{
+    cursor: pointer;
+}
+
+
+.movies{
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+}
+
+
+.titulo{
+    /* Minha Lista */
+
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.1rem;
+    line-height: 15px;
+    padding-top: 2%;
+    padding-left: 3.5%;
+    padding-bottom: 1.5%;
+
+    color: #647380;
+    width: 100%;
+
+
+
+
+}
+
+.nav_links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0 20px;
+    
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: #fff !important;
+}
+
+.pfp{
+    background-image: url("https://i.pinimg.com/236x/25/eb/3e/25eb3eabdf7eb0b7f608030786108aaa.jpg");
+
+    width: 60px;
+    height: 60px;
+
+    background-size: cover;
+    background-position: top center;
+
+    border-radius: 10%;
+    border: 0.2px solid white;
+    cursor: pointer;
+}
+
+
+
+
+
+

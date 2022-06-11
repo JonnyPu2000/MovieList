@@ -1,5 +1,5 @@
 <div *ngIf="isLoading">Carregando</div>
 
-<div *ngIf="!isLoading">
-    <app-movie-card *ngFor="let movie of movies" [data]="movie"></app-movie-card>
+<div class="filmes">
+    <app-movie-card *ngFor="let movie of movies" (onAction)="updateList()" [data]="movie"></app-movie-card>
 </div>

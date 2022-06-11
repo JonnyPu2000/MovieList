@@ -1,4 +1,13 @@
-<div class="home-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieList - Minha Lista</title>
+</head>
+
+<body>
 
     <header>
         <svg width="80" height="120" viewBox="0 0 36 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,8 +23,7 @@
         </nav>
         <div *ngIf="user.imageUrl" class="pfp" [ngStyle]="{'background-image': 'url(' + user.imageUrl + ')'}" (click)="openDialog()"></div>
     </header>
-        <div class="titulo">Lista de Filmes</div>
-        <app-movie mode="all" [filter]="listFilter"></app-movie>
-</div>
-
-
+    <div class="titulo">Meus Filmes</div>
+    <app-movie mode="my-list" [filter]="listFilter"></app-movie>
+</body>
+</html>

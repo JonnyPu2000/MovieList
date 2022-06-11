@@ -6,5 +6,13 @@
         "^/FILMS": ""
       },
       "changeOrigin": true
+    },
+    "/BACKEND": {
+      "target": "https://backend-usabilidade.herokuapp.com/",
+      "secure": false,
+      "pathRewrite": {
+        "^/BACKEND": ""
+      },
+      "changeOrigin": true
     }
   }
