@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { ToastrService } from 'ngx-toastr';
 import { firstValueFrom, Subject } from 'rxjs';
-import { IAuthResponse } from './auth.model';
+import { IAuthResponse, ISignUp } from './auth.model';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +20,6 @@ export class AuthService {
         return;
       }
 
-      console.log("AUTHUSER", auth.user)
       localStorage.setItem('user', JSON.stringify(auth.user));
       localStorage.setItem('token', auth.token);
     })
@@ -45,11 +44,11 @@ export class AuthService {
     return true;
   }
 
-  async signup() {
-    const $auth = this.httpClient.get<IAuthResponse>('/BACKEND/signup');
+  async signup(payload: ISignUp) {
+    const $auth = this.httpClient.post<any>('/BACKEND/signup', payload);
     const response = await firstValueFrom($auth);
 
-    
+    return response.code === 201;
   }
 
   signOut() {

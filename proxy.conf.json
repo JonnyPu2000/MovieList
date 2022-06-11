@@ -8,7 +8,7 @@
       "changeOrigin": true
     },
     "/BACKEND": {
-      "target": "http://localhost:8080",
+      "target": "https://backend-usabilidade.herokuapp.com/",
       "secure": false,
       "pathRewrite": {
         "^/BACKEND": ""

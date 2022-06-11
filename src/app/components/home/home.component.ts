@@ -13,8 +13,9 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router, private dialogService: MatDialog) { }
 
   user: any;
+
+  listFilter: string = "";
   
-  dialogRef: MatDialogRef<ChangeAvatarDialog>
   ngOnInit(): void {
     this.user = JSON.parse(localStorage.getItem('user') || '');
   }
@@ -33,5 +34,9 @@ export class HomeComponent implements OnInit {
 
   goToMyList() {
     this.router.navigate(['my-list'])
+  }
+
+  filterList(newFilter: string) {
+    this.listFilter = newFilter;
   }
 }
