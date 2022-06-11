@@ -14,6 +14,7 @@ export class UserListComponent implements OnInit {
   constructor(private router: Router, private dialogService: MatDialog) { }
   
   user: any;
+  listFilter: string = "";
   
   ngOnInit(): void {
     this.user = JSON.parse(localStorage.getItem('user') || '');
@@ -33,5 +34,9 @@ export class UserListComponent implements OnInit {
       height: '300px',
       width: '500px',
     });
+  }
+
+  filterList(newFilter: string) {
+    this.listFilter = newFilter;
   }
 }

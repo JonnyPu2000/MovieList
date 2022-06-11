@@ -20,6 +20,7 @@ import { ChangeAvatarDialog } from './components/change-avatar/change-avatar.com
 import {MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import {MatInputModule} from '@angular/material/input';
     RegisterAcessComponent,
     LoginComponent,
     UserListComponent,
-    ChangeAvatarDialog
+    ChangeAvatarDialog,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
