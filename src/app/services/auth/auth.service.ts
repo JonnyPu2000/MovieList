@@ -33,7 +33,7 @@ export class AuthService {
   }
 
   async signIn(data: {email: string, password: string}): Promise<boolean> {
-    const $auth = this.httpClient.post<IAuthResponse>('/BACKEND/signin', data);
+    const $auth = this.httpClient.post<IAuthResponse>('https://backend-usabilidade.herokuapp.com/signin', data);
     const response = await firstValueFrom($auth);
     if(response?.error) {
       this.toastr.error(response.error)
@@ -45,7 +45,7 @@ export class AuthService {
   }
 
   async signup(payload: ISignUp) {
-    const $auth = this.httpClient.post<any>('/BACKEND/signup', payload);
+    const $auth = this.httpClient.post<any>('https://backend-usabilidade.herokuapp.com/signup', payload);
     const response = await firstValueFrom($auth);
 
     return response.code === 201;
