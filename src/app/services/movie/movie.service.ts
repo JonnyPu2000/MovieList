@@ -16,12 +16,12 @@ export class MovieService {
   
 
   getMovies(): Promise<IMovie[]> {
-    const response = this.authClient.get<{data: IMovie[]}>('/BACKEND/filmes');
+    const response = this.authClient.get<{data: IMovie[]}>('https://backend-usabilidade.herokuapp.com/filmes');
     return firstValueFrom(response).then(res => res.data);
   }
 
   getMyMovies() {
-    const response = this.authClient.get<{data: IMovie[]}>(`/BACKEND/filmes/list?email=${this.user.email}`);
+    const response = this.authClient.get<{data: IMovie[]}>(`https://backend-usabilidade.herokuapp.com/filmes/list?email=${this.user.email}`);
     return firstValueFrom(response).then(res => res.data);
   }
 
@@ -30,12 +30,12 @@ export class MovieService {
       movieId,
       email: this.user.email
     }
-    const response = this.authClient.post<{data: IMovie[]}>(`/BACKEND/filmes/list`, payload);
+    const response = this.authClient.post<{data: IMovie[]}>(`https://backend-usabilidade.herokuapp.com/filmes/list`, payload);
     return firstValueFrom(response).then(res => res.data);
   }
 
   remove(movieId: string) {
-    const response = this.authClient.delete<{data: IMovie[]}>(`/BACKEND/filmes/list?movieId=${movieId}&email=${this.user.email}`);
+    const response = this.authClient.delete<{data: IMovie[]}>(`https://backend-usabilidade.herokuapp.com/filmes/list?movieId=${movieId}&email=${this.user.email}`);
     return firstValueFrom(response).then(res => res.data);
   }
 
@@ -45,7 +45,7 @@ export class MovieService {
       email: this.user.email
     }
 
-    const response = this.authClient.put<any>(`/BACKEND/user`, payload);
+    const response = this.authClient.put<any>(`https://backend-usabilidade.herokuapp.com/user`, payload);
     const user = await firstValueFrom(response).then(res => res.data);
     localStorage.setItem('user', JSON.stringify(user));
   }
